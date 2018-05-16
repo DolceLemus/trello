@@ -38,6 +38,11 @@ header div div {
     display: inline-block;
 }
 
+.container {
+    /* display: inline-block;
+    display: inline-flex; */
+}
+
 /* colores y ubicaciones de los elementos del header */
 
 /* iconos */
@@ -90,7 +95,7 @@ header div ul li .icon {
 
 /* objetos en el main */
 
-#add-comment-input {
+#add-comment-input, #add-comment-input-new {
     margin-top: 1em;
     width: 20em;
     height: 2.4em;
@@ -98,12 +103,21 @@ header div ul li .icon {
     cursor: pointer;
     border: none;
     margin-left: 1em;
+    /* display: inline-flex; */
+    /* border: 1px solid black; */
 }
 
+/* #add-comment-input-new{
+    padding-top: -1em;
+} */
+
 .containerForm {
+    top: 0;
+    padding-top: 0;
     width: 19em;
     height: 6em;
     background-color: rgb(204, 204, 204);
+    display: inline-block;
 }
 
 .btnAceptar {
@@ -119,4 +133,9 @@ header div ul li .icon {
     position: absolute;
     margin-left: .5em;
     cursor: pointer;
+}
+#addTarjetN {
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0;
 }
