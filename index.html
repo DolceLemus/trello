@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Trello</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
 
-        <script type="text/javascript" src="js/app.js">
+<head>
+    <meta charset="utf-8">
+    <title>Trello</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="Shorcut Icon" href="assets\trello-brand-assets\favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
 
-        </script>
-    </body>
+<body>
+    <header>
+        <div class="header">
+            <div class="tableros">
+                <span class="icon"> <i class="fab fa-trello"></i> </span>
+                <span>Tableros</span>
+            </div>
+            <div class="search">
+                <input type="text" name="search-input" id="input">
+                <span class="container-lens">
+                        <label for="search-input"></label>
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                </span>
+            </div>
+            <div class="trello-half"></div>
+            <div class="icons">
+                <ul>
+                    <li><span class="icon"> <i class="fas fa-plus"></i> </span></li>
+                    <li><span class="icon"> <i class="fas fa-info-circle"></i> </span></li>
+                    <li><span class="icon"> <i class="far fa-bell"></i> </span></li>
+                    <li><span class="icon"> <i class="initials">DL</i> </span></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="titles">
+        <div class="title-tablero">
+            <span>Tablero - Reto de código</span>
+        </div>
+        <span class="icon"><i class="far fa-star"></i></span>
+        <div class="visibility">|
+            <span class="icon"> <i class="fas fa-briefcase"></i> </span>
+            <span>Privado</span>
+        </div>
+    </section>
+    <main id='container'>
+        <!-- boton de inicio para añadir una lista -->
+        <div id="containerForm">
+            <textarea id="add-comment-input" type="text" placeholder=" Añadir una lista..." autocomplete="off" maxlength="512" rows="1"></textarea>
+        </div>
+    </main>
+    <footer>
+    </footer>
+
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
 </html>

@@ -1,3 +1,122 @@
-body{
+body {
     box-sizing: border-box;
+    display: block;
+    background: #00C2E0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    margin-top: .3em;
+}
+
+li {
+    display: inline-block;
+    padding-left: 1em;
+}
+
+/* navegadores horizontales */
+
+header {
+    width: 100%;
+    background: #0098B7;
+    height: 2.5em;
+}
+
+.titles {
+    width: 100%;
+    margin: 0;
+}
+
+header div div {
+    display: inline-block;
+}
+
+.titles div, span {
+    display: inline-block;
+}
+
+/* colores y ubicaciones de los elementos del header */
+
+/* iconos */
+
+.icon {
+    color: white;
+    font-size: 20px;
+    padding-top: .3em;
+    padding-bottom: 0;
+}
+
+header div ul li .icon {
+    background-color: #29CCE5;
+    height: 1.2em;
+    width: 1.5em;
+    text-align: center;
+}
+
+.trello-half {
+    width: 5em;
+    height: 1.5em;
+    background-image: url(../assets/images/Trello.png);
+    margin-left: 25%;
+}
+
+/* partes del header */
+
+.tableros {
+    width: 10%;
+    /* border: 1px solid black; */
+}
+
+.search {
+    position: relative;
+    width: 12%;
+    /* border: 1px solid black; */
+    top: 0;
+}
+
+#input {
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    height: 2em;
+}
+
+.icons {
+    padding-left: 25%;
+}
+
+/* objetos en el main */
+
+#add-comment-input {
+    margin-top: 1em;
+    width: 20em;
+    height: 2.4em;
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+    border: none;
+    margin-left: 1em;
+}
+
+.containerForm {
+    width: 19em;
+    height: 6em;
+    background-color: rgb(204, 204, 204);
+}
+
+.btnAceptar {
+    margin-left: 1em;
+    height: 2.5em;
+    width: 6em;
+    cursor: pointer;
+}
+
+.iconCancel {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    margin-left: .5em;
+    cursor: pointer;
 }
