@@ -106,6 +106,17 @@ header div ul li .icon {
     /* display: inline-flex; */
     /* border: 1px solid black; */
 }
+#add-comment-input-text {
+    margin-top: 1em;
+    width: 20em;
+    height: 5em;
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+    border: none;
+    margin-left: 1em;
+    /* display: inline-flex; */
+    /* border: 1px solid black; */
+}
 
 /* #add-comment-input-new{
     padding-top: -1em;
@@ -115,11 +126,15 @@ header div ul li .icon {
     top: 0;
     padding-top: 0;
     width: 19em;
-    height: 6em;
+    height: 7em;
     background-color: rgb(204, 204, 204);
     display: inline-block;
 }
 
+#containerFormAuto{
+    height: auto;
+    padding-bottom: 1em;
+}
 .btnAceptar {
     margin-left: 1em;
     height: 2.5em;
@@ -138,4 +153,14 @@ header div ul li .icon {
     text-decoration: underline;
     cursor: pointer;
     margin: 0;
+    padding-left: 1.5em;
+    margin-top: 1em;
+    }
+
+.titleComment{
+    margin: 0;
+    margin-top: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 1.5em;
 }

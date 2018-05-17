@@ -40,8 +40,9 @@ addList.addEventListener('click', function() {
 
     // boton cancelar
     cancel.addEventListener('click', function() {
-        inputContainer.style.display = "block";
+        inputContainer.style.display = "inline-block";
         container.removeChild(containerForm);
+        addList.getElementById('add-comment-input');
     })
 
     // boton Guardar
@@ -77,16 +78,29 @@ addList.addEventListener('click', function() {
         // estilos en CSS
         containerList.classList.add('containerForm');
         containerForm.classList.add('containerForm');
+        titleComment.classList.add('titleComment');
+        paragraphAddTarjet.id = 'addTarjetN';
 
-        paragraphAddTarjet.id='addTarjetN';
 
-        textAddTarjet.addEventListener('click', function() {
-            containerAddTarjet.removeChild('textAddTarjet');
+        paragraphAddTarjet.addEventListener('click', function() {
+            // creando elementos
+            var addNewCard = document.createElement('textarea');
+            var btnAdd = document.createElement("button");
+            var btnText = document.createTextNode("Añadir");
+
+            // anidar
+            containerList.appendChild(addNewCard);
+            containerList.appendChild(space);
+            containerList.appendChild(btnAdd);
+            btnAdd.appendChild(btnText);
+
+            // estilos
+            btnAdd.classList.add('btnAceptar');
+            addNewCard.id = 'add-comment-input-text';
+            containerList.id = 'containerFormAuto';
+            // remover
+            containerList.removeChild(containerAddTarjet);
 
         })
-
-
-
-
     })
 });
