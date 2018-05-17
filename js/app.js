@@ -87,19 +87,57 @@ addList.addEventListener('click', function() {
             var addNewCard = document.createElement('textarea');
             var btnAdd = document.createElement("button");
             var btnText = document.createTextNode("Añadir");
+            var cancelAdd = document.createElement('i');
+            var containerparagraphTextValueAddCardNew = document.createElement('div');
+
 
             // anidar
+            containerList.appendChild(containerparagraphTextValueAddCardNew); //se utiliza en la funcion del boton añadir
             containerList.appendChild(addNewCard);
             containerList.appendChild(space);
             containerList.appendChild(btnAdd);
             btnAdd.appendChild(btnText);
+            containerList.appendChild(cancelAdd);
+
+            // icons
+            cancelAdd.classList.add('fas', 'fa-times', 'times');
 
             // estilos
             btnAdd.classList.add('btnAceptar');
             addNewCard.id = 'add-comment-input-text';
             containerList.id = 'containerFormAuto';
+            cancelAdd.classList.add('iconCancel');
             // remover
             containerList.removeChild(containerAddTarjet);
+
+            // boton cancelar
+            cancelAdd.addEventListener('click', function() {
+                // inputContainer.style.display = "inline-block";
+                container.removeChild(containerList);
+                // addList.getElementById('add-comment-input');
+
+            })
+
+            // boton añadir
+            btnAdd.addEventListener('click', function() {
+                // creando
+                var valueAddCardNew = document.getElementById('add-comment-input-text').value;
+                var textValueAddCardNew = document.createTextNode(valueAddCardNew);
+                var paragraphTextValueAddCardNew = document.createElement('p');
+                var contParagraph = document.createElement('div');
+
+                // limpiar el textarea
+                document.getElementById('add-comment-input-text').value = '';
+
+                // anidando
+
+                containerparagraphTextValueAddCardNew.appendChild(contParagraph);
+                contParagraph.appendChild(paragraphTextValueAddCardNew);
+                paragraphTextValueAddCardNew.appendChild(textValueAddCardNew);
+
+                // estilos
+                contParagraph.classList.add("containerparagraphTextValueAddCardNew");
+            })
 
         })
     })

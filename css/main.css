@@ -118,9 +118,7 @@ header div ul li .icon {
     /* border: 1px solid black; */
 }
 
-/* #add-comment-input-new{
-    padding-top: -1em;
-} */
+
 
 .containerForm {
     top: 0;
@@ -163,4 +161,12 @@ header div ul li .icon {
     font-size: 20px;
     font-weight: bold;
     padding-left: 1.5em;
+}
+
+.containerparagraphTextValueAddCardNew{
+    height: 2.4em;
+    width: 17em;
+    margin-left: .8em;
+    background-color: rgb(238, 238, 238);
+    border: none;
 }
