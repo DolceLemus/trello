@@ -4,6 +4,9 @@ body {
     background: #00C2E0;
     margin: 0;
     font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    background: url(./../assets/images/w2.jpg);
+    /* background-size: cover ; */
 }
 
 ul {
@@ -23,11 +26,12 @@ header {
     width: 100%;
     background: #0098B7;
     height: 2.5em;
+    opacity: .7;
 }
 
 .titles {
     width: 100%;
-    margin: 0;
+    margin-top: 1em;
 }
 
 header div div {
@@ -45,24 +49,49 @@ header div div {
 
 /* colores y ubicaciones de los elementos del header */
 
+/* fuentes */
+
+.titleTablero {
+    font-weight: bold;
+    font-size: 19px;
+    margin-left: 1em;
+}
+
 /* iconos */
 
 .icon {
     color: white;
     font-size: 20px;
-    padding-top: .3em;
+    /* padding-top: .3em; */
     padding-bottom: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.iconTitles {
+    color: white;
+    font-size: 14px;
+    /* padding-top: .3em; */
+    padding-bottom: 0;
+    border-radius: 2px;
+    margin-left: 1em;
+}
+
+.separacion {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 header div ul li .icon {
+    padding-top: .2em;
     background-color: #29CCE5;
-    height: 1.2em;
+    height: 1.4em;
     width: 1.5em;
     text-align: center;
 }
 
 .trello-half {
-    width: 5em;
+    width: 4.5em;
     height: 1.5em;
     background-image: url(../assets/images/Trello.png);
     margin-left: 25%;
@@ -72,6 +101,9 @@ header div ul li .icon {
 
 .tableros {
     width: 10%;
+    margin-left: 1em;
+    color: white;
+    font-weight: bold;
     /* border: 1px solid black; */
 }
 
@@ -99,63 +131,79 @@ header div ul li .icon {
     margin-top: 1em;
     width: 20em;
     height: 2.4em;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(230, 230, 230);
     cursor: pointer;
     border: none;
     margin-left: 1em;
+    margin-right: 1em;
+    float: left;
+    border-radius: 5px;
     /* display: inline-flex; */
     /* border: 1px solid black; */
 }
+
 #add-comment-input-text {
     margin-top: 1em;
     width: 20em;
     height: 5em;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(230, 230, 230);
     cursor: pointer;
     border: none;
     margin-left: 1em;
+    float: left;
+    border-radius: 5px;
     /* display: inline-flex; */
     /* border: 1px solid black; */
 }
 
-
-
 .containerForm {
-    top: 0;
-    padding-top: 0;
-    width: 19em;
+    width: 18em;
     height: 7em;
     background-color: rgb(204, 204, 204);
     display: inline-block;
+    float: left;
+    border-radius: 5px;
+    margin-right: .5em;
+    margin-top: .5em;
 }
 
-#containerFormAuto{
+#containerFormAuto {
     height: auto;
     padding-bottom: 1em;
+    border-radius: 5px;
 }
+
 .btnAceptar {
     margin-left: 1em;
     height: 2.5em;
     width: 6em;
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: rgb(121, 217, 92);
+    color: white;
+    margin-top: .5em;
 }
 
 .iconCancel {
-    color: white;
-    font-size: 30px;
+    color: rgb(170, 170, 170);
+    font-size: 25px;
     position: absolute;
     margin-left: .5em;
     cursor: pointer;
+    padding-top: .3em;
+    font-weight: 50;
 }
+
 #addTarjetN {
     text-decoration: underline;
     cursor: pointer;
     margin: 0;
     padding-left: 1.5em;
     margin-top: 1em;
-    }
+}
 
-.titleComment{
+.titleComment {
     margin: 0;
     margin-top: 1em;
     font-size: 20px;
@@ -163,10 +211,27 @@ header div ul li .icon {
     padding-left: 1.5em;
 }
 
-.containerparagraphTextValueAddCardNew{
+.containerparagraphTextValueAddCardNew {
     height: 2.4em;
-    width: 17em;
+    width: 16em;
     margin-left: .8em;
     background-color: rgb(238, 238, 238);
     border: none;
+    border-radius: 5px;
+}
+
+section span, .visibility {
+    /* width: 100%; */
+    background: #0098B7;
+    height: 2em;
+    opacity: .7;
+    border-radius: 5px;
+    color: white;
+    margin-left: .3em;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.titleTablero {
+    margin: 0;
 }

@@ -10,8 +10,6 @@ addList.addEventListener('click', function() {
 
     // input creado en js para que reemplace el primero
     var inputContainerNew = document.createElement('textarea'); //nuevo input para reemplazar al original y poder escribir
-
-
     var btnAceptar = document.createElement('button');
     var cancel = document.createElement('i');
     var space = document.createElement('br');
@@ -19,12 +17,14 @@ addList.addEventListener('click', function() {
 
     // anidado
     btnAceptar.appendChild(btnTextContainer);
-
     containerForm.appendChild(inputContainerNew); //nuevo input para reemplazar al original y poder escribir
     containerForm.appendChild(space);
     containerForm.appendChild(btnAceptar);
     containerForm.appendChild(cancel);
     container.appendChild(containerForm);
+
+    // focus
+    inputContainerNew.focus();
 
     // icons
     cancel.classList.add('fas', 'fa-times', 'times');
@@ -42,9 +42,11 @@ addList.addEventListener('click', function() {
     cancel.addEventListener('click', function() {
         inputContainer.style.display = "inline-block";
         container.removeChild(containerForm);
-        addList.getElementById('add-comment-input');
+
+        //     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     })
 
+    // VERSIÓN 0.0.2
     // boton Guardar
     btnAceptar.addEventListener('click', function() {
 
@@ -52,10 +54,8 @@ addList.addEventListener('click', function() {
         var containerList = document.createElement('div');
         var titleList = document.createElement('div');
         var titleComment = document.createElement('p');
-
         var addNameListComment = document.getElementById('add-comment-input-new').value;
         var textNewComment = document.createTextNode(addNameListComment); //Convirtiendo a texto el string ingrasado de addNameListComment
-
         var containerAddTarjet = document.createElement('div');
         var paragraphAddTarjet = document.createElement('p');
         var textAddTarjet = document.createTextNode("Añadir una tarjeta... ");
@@ -65,10 +65,11 @@ addList.addEventListener('click', function() {
         titleList.appendChild(titleComment);
         titleComment.appendChild(textNewComment);
         containerList.appendChild(space);
-
         containerList.appendChild(containerAddTarjet);
         containerAddTarjet.appendChild(paragraphAddTarjet);
         paragraphAddTarjet.appendChild(textAddTarjet);
+
+        // VERSI0N 0.0.6 (EXTRA)
         container.appendChild(containerList);
         container.appendChild(containerForm);
 
@@ -81,15 +82,15 @@ addList.addEventListener('click', function() {
         titleComment.classList.add('titleComment');
         paragraphAddTarjet.id = 'addTarjetN';
 
-
+        // VERSIÓN 0.0.4
         paragraphAddTarjet.addEventListener('click', function() {
             // creando elementos
+            // VERSIÓN 0.0.5
             var addNewCard = document.createElement('textarea');
             var btnAdd = document.createElement("button");
             var btnText = document.createTextNode("Añadir");
             var cancelAdd = document.createElement('i');
             var containerparagraphTextValueAddCardNew = document.createElement('div');
-
 
             // anidar
             containerList.appendChild(containerparagraphTextValueAddCardNew); //se utiliza en la funcion del boton añadir
@@ -98,6 +99,8 @@ addList.addEventListener('click', function() {
             containerList.appendChild(btnAdd);
             btnAdd.appendChild(btnText);
             containerList.appendChild(cancelAdd);
+
+            addNewCard.focus();
 
             // icons
             cancelAdd.classList.add('fas', 'fa-times', 'times');
@@ -112,10 +115,7 @@ addList.addEventListener('click', function() {
 
             // boton cancelar
             cancelAdd.addEventListener('click', function() {
-                // inputContainer.style.display = "inline-block";
                 container.removeChild(containerList);
-                // addList.getElementById('add-comment-input');
-
             })
 
             // boton añadir
@@ -130,11 +130,12 @@ addList.addEventListener('click', function() {
                 document.getElementById('add-comment-input-text').value = '';
 
                 // anidando
-
                 containerparagraphTextValueAddCardNew.appendChild(contParagraph);
                 contParagraph.appendChild(paragraphTextValueAddCardNew);
                 paragraphTextValueAddCardNew.appendChild(textValueAddCardNew);
 
+                // focus
+                addNewCard.focus();
                 // estilos
                 contParagraph.classList.add("containerparagraphTextValueAddCardNew");
             })
